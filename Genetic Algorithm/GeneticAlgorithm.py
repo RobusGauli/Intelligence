@@ -5,7 +5,7 @@ import functools
 
 #setup parameter
 
-mutation_rate = 0.01
+mutation_rate = 0.03
 options = ''.join(chr(i) for i in range(65, 97+26)) + ' '
 
 class DNA:
@@ -29,7 +29,7 @@ class DNA:
                               score + 1 if atuple[0] == atuple[1] else score,
                               zip(self.target, self.random),
                               0)
-    return (score / len(self.target)) * 100
+    return 2 ** score
   
   def crossover(self, mate):
     #lets choose the random between 0 and length of target
@@ -90,8 +90,8 @@ class Genetic:
         break
 
 def main():
-  n = 1500 #number of initial population for 
-  target = 'To be or not to be'
+  n = 1000 #number of initial population for 
+  target = 'HI my name is robus gauli and priyanka is near me'
   _genetic = Genetic(n, target)
 
   while True:
