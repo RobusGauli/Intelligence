@@ -5,7 +5,7 @@ import functools
 
 #setup parameter
 
-mutation_rate = 0.03
+mutation_rate = 1
 options = ''.join(chr(i) for i in range(65, 97+26)) + ' '
 
 class DNA:
@@ -91,7 +91,7 @@ class Genetic:
 
 def main():
   n = 1000 #number of initial population for 
-  target = 'HI my name is robus gauli and priyanka is near me'
+  target = 'HI my name is robus gauli'
   _genetic = Genetic(n, target)
 
   while True:
