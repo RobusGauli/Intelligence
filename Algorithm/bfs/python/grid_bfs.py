@@ -105,4 +105,21 @@ def traverse(node: Node) -> list:
   yield node.point
   yield from traverse(node.parent)
 
+def main():
+  rows = 4
+  cols = 4
+  points = (Point(row, col) for row in range(rows) for col in range(cols))
+  g = Graph(points, rows, cols)
+  start = Point(0, 0)
+  end = Point(3, 3)
+  target = bfs(g, start, end)
+  if target:
+    paths = list(traverse(target))
+    print(paths)
+
+if __name__ == '__main__':
+  main()
+  
+
+
 
