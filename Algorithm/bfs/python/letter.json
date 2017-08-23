@@ -1,0 +1,1 @@
+[{"val": "b", "edges": ["c", "d", "e"]}, {"val": "c", "edges": ["b", "f"]}, {"val": "d", "edges": ["b", "f", "l", "k"]}, {"val": "e", "edges": ["b", "k"]}, {"val": "f", "edges": ["c", "d"]}, {"val": "k", "edges": ["d", "e"]}, {"val": "l", "edges": ["d", "j"]}, {"val": "j", "edges": ["g", "h"]}]
