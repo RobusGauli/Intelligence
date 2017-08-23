@@ -1,1 +1,118 @@
-[{"val": "b", "edges": ["c", "d", "e"]}, {"val": "c", "edges": ["b", "f"]}, {"val": "d", "edges": ["b", "f", "l", "k"]}, {"val": "e", "edges": ["b", "k"]}, {"val": "f", "edges": ["c", "d"]}, {"val": "k", "edges": ["d", "e"]}, {"val": "l", "edges": ["d", "j"]}, {"val": "j", "edges": ["g", "h"]}]
+[
+  {
+    "val": "b",
+    "edges": [
+      {
+        "val": "c",
+        "cost": 18
+      },
+      {
+        "val": "d",
+        "cost": 19
+      },
+      {
+        "val": "e",
+        "cost": 15
+      }
+    ]
+  },
+  {
+    "val": "c",
+    "edges": [
+      {
+        "val": "b",
+        "cost": 18
+      },
+      {
+        "val": "f",
+        "cost": 11
+      }
+    ]
+  },
+  {
+    "val": "d",
+    "edges": [
+      {
+        "val": "b",
+        "cost": 19
+      },
+      {
+        "val": "f",
+        "cost": 12
+      },
+      {
+        "val": "l",
+        "cost": 22
+      },
+      {
+        "val": "k",
+        "cost": 8
+      }
+    ]
+  },
+  {
+    "val": "e",
+    "edges": [
+      {
+        "val": "b",
+        "cost": 15
+      },
+      {
+        "val": "k",
+        "cost": 23
+      }
+    ]
+  },
+  {
+    "val": "f",
+    "edges": [
+      {
+        "val": "c",
+        "cost": 11
+      },
+      {
+        "val": "d",
+        "cost": 12
+      }
+    ]
+  },
+  {
+    "val": "k",
+    "edges": [
+      {
+        "val": "d",
+        "cost": 8
+      },
+      {
+        "val": "e",
+        "cost": 23
+      }
+    ]
+  },
+  {
+    "val": "l",
+    "edges": [
+      {
+        "val": "d",
+        "cost": 22
+      },
+      {
+        "val": "j",
+        "cost": 16
+      }
+    ]
+  },
+  {
+    "val": "j",
+    "edges": [
+      {
+        "val": "g",
+        "cost": 18
+      },
+      {
+        "val": "h",
+        "cost": 7
+      }
+    ]
+  }
+]
