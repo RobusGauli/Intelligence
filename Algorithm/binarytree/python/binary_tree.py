@@ -2,7 +2,7 @@ import os
 import sys
 import collections
 
-#a sample representation of node
+#a s ample representation of node
 
 class Node:
   def __init__(self, val, right=None, left=None):
