@@ -2,6 +2,8 @@ import json
 #load the data 
 number_tree = json.loads(open('nums.json').read())
 #model the node instance
+
+# graph
 class Node:
   def __init__(self, val):
     self.val = val
