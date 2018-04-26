@@ -3,6 +3,7 @@ from collections import namedtuple
 from queue import PriorityQueue
 letter = json.loads(open('letter.json').read())
 
+#letter 
 class Node:
 	
 	def __init__(self, label):
