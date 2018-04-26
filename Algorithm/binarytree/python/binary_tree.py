@@ -1,7 +1,11 @@
 import os
 import sys
 import collections
-
+import itertools
+import inspect
+from inspect import signature
+from inspect import Signature
+from inspect import Parameter
 #a s ample representation of node
 
 class Node:
