@@ -2,10 +2,10 @@ var population
 
 var target;
 var count = 0
-//createa target vector and apply the position
+// create target vector and apply the position
 target = createVector(width/2, 40)
 
-//maximum util function
+// maximum util function
 function findMax(items, predicate) {
   if (!predicate) {
     predicate = function(item) {
@@ -13,7 +13,7 @@ function findMax(items, predicate) {
     }
   }
   
-  //if there is predicate
+  // if there is predicate
   if (!items) {
     return null
   }
@@ -28,37 +28,26 @@ function findMax(items, predicate) {
 }
 
 function setup() {
-	createCanvas(1000, 700)
+  createCanvas(1000, 700)
   population = new Population(30)
   target = createVector(50, 200)
-  //run 
- 
- 
-  
 }
 
 function draw() {
-	background(0)
+  background(0)
   fill(123, 222, 122, 400)
   rect(this.target.x, this.target.y, 40, 20)
   count++
   if (count >= 600) {
     count = 0
     population.generateMatingPool()
-    //i must be able to say
-    //population.generateMatingPool()
-    //population.reproduce()
-    //population.evaluate()
-  } else{
+  } else {
     population.run()  
   }
- 	
-  
-  
 }
 
 function Population(n) {
-	this.n = n
+  this.n = n
   this.particles = []
   for(var i = 0; i < this.n; i++ ) {
   	this.particles.push(new Particle()) 
@@ -66,19 +55,19 @@ function Population(n) {
    }
    
    this.run = function() {
-   		for (var i = 0; i < this.particles.length; i++) {
+   for (var i = 0; i < this.particles.length; i++) {
       	this.particles[i].show()
-				this.particles[i].update()
+	this.particles[i].update()
         
       }
    }
    
    this.generateMatingPool = function() {
-      //first we calcalate the best fitness
-     //and according to the fitness we createa mating poool
-     //from the mating pool we select the two parents
-     //from the two parents, we create a new child
-     //apply the mutation
+     // first we calcalate the best fitness
+     // and according to the fitness we createa mating poool
+     // from the mating pool we select the two parents
+     // from the two parents, we create a new child
+     // apply the mutation
      var matingPool = []
      var bestParent = findMax(this.particles, function(particle) {
        return particle.fitness()
@@ -87,18 +76,18 @@ function Population(n) {
      var maxFitness = bestParent.fitness()
      
      for (var i = 0; i < this.particles.length; i++) {
-       //we have to take each particle , and cacluate the normalized fitenss
+       // we have to take each particle , and cacluate the normalized fitenss
        var n = floor(this.particles[i].fitness() / maxFitness * 100)
-       //push the parents in the mating pool for n time
+       // push the parents in the mating pool for n time
        for (var j = 0; j < n; j++ ){
          matingPool.push(this.particles[i])
        }
      }
      
-     //select two parentss from the mating pool
-     //var parentA = random(matingPool)
-     //var parentB = random(matingPool)
-     //now do the cross over and generate new child
+     // select two parentss from the mating pool
+     // var parentA = random(matingPool)
+     // var parentB = random(matingPool)
+     // now do the cross over and generate new child
      var newParticles = []
      for (var k = 0; k < this.n; k++){
        var parentA = random(matingPool).dna
